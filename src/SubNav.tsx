@@ -1,11 +1,11 @@
 import * as React from "react";
 import "./css/SubNav.css";
 
-export interface IProps {
+export interface ISubNavProps {
   activePage: string;
 }
 
-function SubNav(props: IProps) {
+function SubNav(props: ISubNavProps) {
   let title;
   switch (props.activePage) {
     case "waivers":

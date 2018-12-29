@@ -2,11 +2,11 @@ import * as React from "react";
 
 import "./css/Footer.css";
 
-export interface IProps {
+export interface IFooterProps {
   leagueId: string;
 }
 
-function Footer(props: IProps) {
+function Footer(props: IFooterProps) {
   const leagueURL = `http://games.espn.com/ffl/leagueoffice?leagueId=${props.leagueId}`;
 
   return (

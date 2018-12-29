@@ -1,21 +1,39 @@
-import * as React from 'react';
-import './css/App.css';
+import * as React from "react";
+import "./css/App.css";
 
-import logo from './img/logo.svg';
+import Footer, { IProps } from './Footer';
+import Nav from "./Nav"
+import SubNav from "./SubNav"
 
-class App extends React.Component {
+interface IState {
+  activePage: string;
+  leagueId: string;
+}
+
+class App extends React.Component<{}, IState> {
+  constructor(props: IProps) {
+    super(props);
+
+    this.state = {
+      activePage: "matchups",
+      leagueId: "334568"
+    };
+
+    this.setActivePage = this.setActivePage.bind(this);
+  }
+
   public render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
+        <Nav activePage={this.state.activePage} pageClick={this.setActivePage} />
+        <SubNav activePage={this.state.activePage} />
+        <Footer leagueId={this.state.leagueId} />
       </div>
     );
+  }
+
+  private setActivePage(page: string) {
+    this.setState({ activePage: page });
   }
 }
 

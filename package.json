@@ -18,6 +18,7 @@
     "@types/node": "^10.12.18",
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
+    "calcite-web": "github:Esri/calcite-web#v1.2.0",
     "typescript": "^3.2.2"
   }
 }

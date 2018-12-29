@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Extreme Sportsball",
+  "name": "ESPN fantasy football league app.",
   "icons": [
     {
       "src": "favicon.ico",
